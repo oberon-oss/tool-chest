@@ -8,10 +8,10 @@ import eu.oberon.oss.chess.base.interfaces.Field;
 import eu.oberon.oss.chess.base.interfaces.Move;
 import eu.oberon.oss.chess.base.interfaces.Piece;
 import eu.oberon.oss.chess.base.interfaces.Position;
-import eu.oberon.oss.chess.game.base.BoardImpl;
-import eu.oberon.oss.chess.game.base.MoveImpl;
-import eu.oberon.oss.chess.game.base.PieceImpl;
-import eu.oberon.oss.chess.game.base.PositionImpl;
+import eu.oberon.oss.chess.base.impl.BoardImpl;
+import eu.oberon.oss.chess.base.impl.MoveImpl;
+import eu.oberon.oss.chess.base.impl.PieceImpl;
+import eu.oberon.oss.chess.base.impl.PositionImpl;
 import eu.oberon.oss.chess.game.data.Chess960StartingPositions;
 
 import java.util.ArrayList;

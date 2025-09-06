@@ -6,7 +6,7 @@ import eu.oberon.oss.chess.base.enums.ChessField;
 import eu.oberon.oss.chess.base.enums.MoveDirection;
 import eu.oberon.oss.chess.base.enums.PieceType;
 
-import eu.oberon.oss.chess.game.base.MoveImpl;
+import eu.oberon.oss.chess.base.impl.MoveImpl;
 import eu.oberon.oss.chess.base.interfaces.Field;
 import eu.oberon.oss.chess.base.interfaces.Move;
 import eu.oberon.oss.chess.base.interfaces.Piece;

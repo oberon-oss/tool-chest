@@ -2,7 +2,7 @@ package eu.oberon.oss.chess.fen.processing;
 
 import eu.oberon.oss.chess.base.enums.ChessColor;
 import eu.oberon.oss.chess.base.interfaces.*;
-import eu.oberon.oss.chess.game.base.PositionImpl.PositionBuilder;
+import eu.oberon.oss.chess.base.impl.PositionImpl.PositionBuilder;
 import lombok.experimental.Accessors;
 
 import java.util.Objects;

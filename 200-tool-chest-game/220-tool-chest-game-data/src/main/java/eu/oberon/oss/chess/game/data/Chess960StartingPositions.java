@@ -1,12 +1,12 @@
 package eu.oberon.oss.chess.game.data;
 
-import lombok.Getter;
 import eu.oberon.oss.chess.base.enums.CastlingType;
 import eu.oberon.oss.chess.base.enums.ChessColor;
+import eu.oberon.oss.chess.base.impl.CastlingConfigurationImpl;
 import eu.oberon.oss.chess.base.interfaces.*;
 import eu.oberon.oss.chess.fen.processing.FENPositionTranslator;
 import eu.oberon.oss.chess.fen.processing.FENPositionTranslatorImpl;
-import eu.oberon.oss.chess.game.base.CastlingConfigurationImpl;
+import lombok.Getter;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -546,10 +546,6 @@ public enum Chess960StartingPositions implements GameStartPosition<Field, Piece<
     P_515(515, "brnqknrb/pppppppp/8/8/8/8/PPPPPPPP/BRNQKNRB w kqKQ - 0 1"),
     P_516(516, "rbbnqknr/pppppppp/8/8/8/8/PPPPPPPP/RBBNQKNR w kqKQ - 0 1"),
     P_517(517, "rnbbqknr/pppppppp/8/8/8/8/PPPPPPPP/RNBBQKNR w kqKQ - 0 1"),
-    /**
-     * This is the default/classic setup of a chess game.
-     * @since 2.0.0
-     */
     P_518(518, "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w kqKQ - 0 1"),
     P_519(519, "rnbqknrb/pppppppp/8/8/8/8/PPPPPPPP/RNBQKNRB w kqKQ - 0 1"),
     P_520(520, "rbnqbknr/pppppppp/8/8/8/8/PPPPPPPP/RBNQBKNR w kqKQ - 0 1"),
@@ -1019,7 +1015,7 @@ public enum Chess960StartingPositions implements GameStartPosition<Field, Piece<
     private static final Map<Integer, Position<Field, Piece<Field>>> CHESS_960_START_POSITION_LOOKUP_MAP;
 
     static {
-        Map<Integer, Position<Field, Piece<Field>>> wrk = new HashMap<>(960);
+        Map<Integer, Position<Field, Piece<Field>>> wrk = HashMap.newHashMap(960);
         FENPositionTranslator<Field, Piece<Field>> translator = new FENPositionTranslatorImpl();
 
         for (Chess960StartingPositions chess960StartingPositions : Chess960StartingPositions.values()) {
@@ -1037,7 +1033,9 @@ public enum Chess960StartingPositions implements GameStartPosition<Field, Piece<
      * {@link #STANDARD_CHESS_STARTING_POSITION}
      *
      * @param chess960ID The ID of the setup to use.
+     *
      * @return The starting position for the specified ID.
+     *
      * @throws IllegalArgumentException if the value for 'chess960ID' is outside the range 0...959
      * @since 2.0.0
      */
@@ -1055,6 +1053,7 @@ public enum Chess960StartingPositions implements GameStartPosition<Field, Piece<
      *
      * @since 2.0.0
      */
+    @SuppressWarnings("unused")
     public static final int STANDARD_CHESS_STARTING_POSITION = 518;
 
 

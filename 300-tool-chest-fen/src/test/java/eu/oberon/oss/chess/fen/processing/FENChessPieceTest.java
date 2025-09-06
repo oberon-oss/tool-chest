@@ -5,7 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.game.base.PieceImpl;
+import eu.oberon.oss.chess.base.impl.PieceImpl;
 import eu.oberon.oss.chess.base.enums.PieceType;
 
 import java.util.stream.Stream;

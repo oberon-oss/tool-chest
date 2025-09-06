@@ -1,5 +1,6 @@
 package eu.oberon.oss.chess.move.generator;
 
+import eu.oberon.oss.chess.base.enums.GameResult;
 import lombok.Getter;
 import lombok.Setter;
 import eu.oberon.oss.chess.base.interfaces.*;

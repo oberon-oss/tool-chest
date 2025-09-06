@@ -30,7 +30,7 @@ import eu.oberon.oss.chess.pgn.data.Game;
 import eu.oberon.oss.chess.pgn.data.Game.GameBuilder;
 import eu.oberon.oss.chess.pgn.data.element.*;
 import eu.oberon.oss.chess.pgn.data.element.ElementSequence.ElementSequenceBuilder;
-import eu.oberon.oss.chess.game.data.GameResult;
+import eu.oberon.oss.chess.base.enums.GameResult;
 import eu.oberon.oss.chess.pgn.data.tags.TagSection;
 import eu.oberon.oss.chess.pgn.data.tags.TagSection.TagSectionBuilder;
 import eu.oberon.oss.chess.pgn.data.tags.defs.AbstractTag;

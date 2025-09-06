@@ -7,7 +7,7 @@ import eu.oberon.oss.chess.base.enums.ChessColor;
 import eu.oberon.oss.chess.base.enums.PieceType;
 import eu.oberon.oss.chess.base.interfaces.*;
 import eu.oberon.oss.chess.game.data.ChessGame;
-import eu.oberon.oss.chess.game.base.MoveImpl;
+import eu.oberon.oss.chess.base.impl.MoveImpl;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
 import eu.oberon.oss.chess.move.generator.tables.pieces.MoveTableProvider;
 

@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 import eu.oberon.oss.chess.pgn.data.element.ElementSequence;
-import eu.oberon.oss.chess.game.data.GameResult;
+import eu.oberon.oss.chess.base.enums.GameResult;
 import eu.oberon.oss.chess.pgn.data.tags.TagSection;
 
 
