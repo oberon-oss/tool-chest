@@ -14,7 +14,6 @@
     <artifactId>tool-chest-game</artifactId>
 
     <modules>
-        <module>210-tool-chest-game-base</module>
         <module>220-tool-chest-game-data</module>
         <module>230-tool-chest-game-move-generator</module>
         <module>240-tool-chest-game-tables</module>
@@ -22,7 +21,12 @@
     <dependencies>
         <dependency>
             <groupId>eu.oberon.oss.chess</groupId>
-            <artifactId>tool-chest-base</artifactId>
+            <artifactId>tool-chest-base-defs</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>eu.oberon.oss.chess</groupId>
+            <artifactId>tool-chest-base-impl</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

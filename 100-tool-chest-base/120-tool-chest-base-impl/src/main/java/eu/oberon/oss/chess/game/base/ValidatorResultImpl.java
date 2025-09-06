@@ -1,8 +1,9 @@
 package eu.oberon.oss.chess.game.base;
 
+import eu.oberon.oss.chess.base.interfaces.ValidatorResult;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.interfaces.ValidatorResult;
+
 
 import java.util.List;
 

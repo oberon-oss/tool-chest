@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>eu.oberon.oss.chess</groupId>
-        <artifactId>tool-chest-game</artifactId>
+        <artifactId>tool-chest-base</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        
     </parent>
 
-    <artifactId>tool-chest-game-base</artifactId>
-    
+    <artifactId>tool-chest-base-defs</artifactId>
+
 </project>

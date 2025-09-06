@@ -9,6 +9,11 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
+    <packaging>pom</packaging>
     <artifactId>tool-chest-base</artifactId>
 
+    <modules>
+        <module>110-tool-chest-base-defs</module>
+        <module>120-tool-chest-base-impl</module>
+    </modules>
 </project>

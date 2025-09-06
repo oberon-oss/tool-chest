@@ -1,15 +1,15 @@
 package eu.oberon.oss.chess.game.base.validators;
 
-import org.jetbrains.annotations.NotNull;
 import eu.oberon.oss.chess.base.enums.CBRanks;
 import eu.oberon.oss.chess.base.enums.ChessColor;
 import eu.oberon.oss.chess.base.exceptions.BoardValidationException;
-import eu.oberon.oss.chess.game.base.ValidatorResultImpl;
 import eu.oberon.oss.chess.base.interfaces.Board;
 import eu.oberon.oss.chess.base.interfaces.Field;
 import eu.oberon.oss.chess.base.interfaces.Piece;
 import eu.oberon.oss.chess.base.interfaces.ValidatorResult;
 import eu.oberon.oss.chess.base.interfaces.validators.ChessValidator;
+import eu.oberon.oss.chess.game.base.ValidatorResultImpl;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;

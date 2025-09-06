@@ -5,16 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>eu.oberon.oss.chess</groupId>
-        <artifactId>tool-chest</artifactId>
+        <artifactId>tool-chest-base</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>tool-chest-fen</artifactId>
+    <artifactId>tool-chest-base-impl</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>eu.oberon.oss.chess</groupId>
-            <artifactId>tool-chest-base-impl</artifactId>
+            <artifactId>tool-chest-base-defs</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
