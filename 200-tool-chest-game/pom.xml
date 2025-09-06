@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.oberon.oss.chess</groupId>
+        <artifactId>tool-chest</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <packaging>pom</packaging>
+    <artifactId>tool-chest-game</artifactId>
+
+    <modules>
+        <module>210-tool-chest-game-base</module>
+        <module>220-tool-chest-game-data</module>
+        <module>230-tool-chest-game-move-generator</module>
+        <module>240-tool-chest-game-tables</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>eu.oberon.oss.chess</groupId>
+            <artifactId>tool-chest-base</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
