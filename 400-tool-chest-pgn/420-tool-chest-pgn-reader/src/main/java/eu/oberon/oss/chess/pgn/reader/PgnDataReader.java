@@ -15,6 +15,15 @@
  */
 package eu.oberon.oss.chess.pgn.reader;
 
+import eu.oberon.oss.chess.base.defs.enums.GameResult;
+import eu.oberon.oss.chess.pgn.data.Game;
+import eu.oberon.oss.chess.pgn.data.Game.GameBuilder;
+import eu.oberon.oss.chess.pgn.data.element.*;
+import eu.oberon.oss.chess.pgn.data.element.ElementSequence.ElementSequenceBuilder;
+import eu.oberon.oss.chess.pgn.data.tags.TagSection;
+import eu.oberon.oss.chess.pgn.data.tags.TagSection.TagSectionBuilder;
+import eu.oberon.oss.chess.pgn.data.tags.defs.AbstractTag;
+import eu.oberon.oss.chess.pgn.data.tags.defs.TagBuilder;
 import generated.antlr.PGNImportFormatBaseListener;
 import generated.antlr.PGNImportFormatLexer;
 import generated.antlr.PGNImportFormatParser;
@@ -26,15 +35,6 @@ import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.pgn.data.Game;
-import eu.oberon.oss.chess.pgn.data.Game.GameBuilder;
-import eu.oberon.oss.chess.pgn.data.element.*;
-import eu.oberon.oss.chess.pgn.data.element.ElementSequence.ElementSequenceBuilder;
-import eu.oberon.oss.chess.base.enums.GameResult;
-import eu.oberon.oss.chess.pgn.data.tags.TagSection;
-import eu.oberon.oss.chess.pgn.data.tags.TagSection.TagSectionBuilder;
-import eu.oberon.oss.chess.pgn.data.tags.defs.AbstractTag;
-import eu.oberon.oss.chess.pgn.data.tags.defs.TagBuilder;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

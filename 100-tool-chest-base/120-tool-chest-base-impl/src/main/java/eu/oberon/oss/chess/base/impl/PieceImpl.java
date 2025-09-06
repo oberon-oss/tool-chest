@@ -1,13 +1,13 @@
 package eu.oberon.oss.chess.base.impl;
 
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
 
 import java.util.Objects;
 

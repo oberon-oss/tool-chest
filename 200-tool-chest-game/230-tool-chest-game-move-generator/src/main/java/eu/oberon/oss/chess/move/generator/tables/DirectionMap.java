@@ -1,8 +1,8 @@
 package eu.oberon.oss.chess.move.generator.tables;
 
+import eu.oberon.oss.chess.base.defs.enums.MoveDirection;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
 import org.jetbrains.annotations.Nullable;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.enums.MoveDirection;
 
 import java.util.EnumMap;
 import java.util.Map;

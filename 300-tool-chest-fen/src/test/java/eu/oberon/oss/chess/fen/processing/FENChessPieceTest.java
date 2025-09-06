@@ -1,21 +1,21 @@
 package eu.oberon.oss.chess.fen.processing;
 
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.impl.PieceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.impl.PieceImpl;
-import eu.oberon.oss.chess.base.enums.PieceType;
 
 import java.util.stream.Stream;
 
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.A1;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.ChessField.A1;
-import static eu.oberon.oss.chess.base.enums.PieceType.*;
 
 
 /**

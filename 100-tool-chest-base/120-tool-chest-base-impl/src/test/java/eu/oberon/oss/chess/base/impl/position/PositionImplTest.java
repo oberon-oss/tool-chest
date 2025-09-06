@@ -1,13 +1,14 @@
 package eu.oberon.oss.chess.base.impl.position;
 
-import org.junit.jupiter.api.Test;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
 import eu.oberon.oss.chess.base.impl.Util;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * @author TigerLilly64

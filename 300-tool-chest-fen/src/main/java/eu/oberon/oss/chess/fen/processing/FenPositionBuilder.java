@@ -1,10 +1,10 @@
 package eu.oberon.oss.chess.fen.processing;
 
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.interfaces.Board;
-import eu.oberon.oss.chess.base.interfaces.CastlingConfiguration;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.Board;
+import eu.oberon.oss.chess.base.defs.interfaces.CastlingConfiguration;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 import lombok.AccessLevel;
 import lombok.Getter;
 

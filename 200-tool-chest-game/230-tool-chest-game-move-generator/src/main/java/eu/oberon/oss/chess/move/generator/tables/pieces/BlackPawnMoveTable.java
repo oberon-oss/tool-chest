@@ -1,21 +1,20 @@
 package eu.oberon.oss.chess.move.generator.tables.pieces;
 
-import org.jetbrains.annotations.Nullable;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
 import eu.oberon.oss.chess.move.generator.MoveTable;
 import eu.oberon.oss.chess.move.generator.tables.Direction;
 import eu.oberon.oss.chess.move.generator.tables.DirectionMap;
 import eu.oberon.oss.chess.move.generator.tables.MoveTableImpl;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
+import org.jetbrains.annotations.Nullable;
 
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
-import static eu.oberon.oss.chess.base.enums.MoveDirection.*;
-import static eu.oberon.oss.chess.base.enums.PieceType.PAWN;
-
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
+import static eu.oberon.oss.chess.base.defs.enums.MoveDirection.*;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.PAWN;
 /**
  * @author TigerLilly64
  */

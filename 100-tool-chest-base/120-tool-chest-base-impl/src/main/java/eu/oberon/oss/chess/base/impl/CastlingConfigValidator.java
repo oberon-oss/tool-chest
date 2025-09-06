@@ -1,11 +1,10 @@
 package eu.oberon.oss.chess.base.impl;
 
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.validators.ExtendedChessValidator;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.*;
-import eu.oberon.oss.chess.base.interfaces.validators.ExtendedChessValidator;
 
 import java.util.ArrayList;
 import java.util.List;

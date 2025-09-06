@@ -1,14 +1,14 @@
 package eu.oberon.oss.chess.base.impl.field;
 
+import eu.oberon.oss.chess.base.defs.enums.CBFiles;
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.FieldIterator;
+import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
-import eu.oberon.oss.chess.base.enums.CBFiles;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.FieldIterator;
 
 import java.util.List;
 
@@ -20,19 +20,19 @@ import static org.junit.jupiter.api.Assertions.*;
 class ChessFieldTest {
 
     @ParameterizedTest
-    @MethodSource("eu.oberon.oss.chess.game.base.field.util.MethodSources#getRankFields")
+    @MethodSource("eu.oberon.oss.chess.base.impl.field.util.MethodSources#getRankFields")
     void getRankFields(int rank, List<ChessField> target) {
         assertTrue(CBRanks.getRank(rank).getFields().containsAll(target));
     }
 
     @ParameterizedTest
-    @MethodSource("eu.oberon.oss.chess.game.base.field.util.MethodSources#getFileFields")
+    @MethodSource("eu.oberon.oss.chess.base.impl.field.util.MethodSources#getFileFields")
     void getFileFields(String file, List<ChessField> target) {
         assertTrue(CBFiles.getFile(file).getFields().containsAll(target));
     }
 
     @ParameterizedTest
-    @MethodSource("eu.oberon.oss.chess.game.base.field.util.MethodSources#getFieldByCoordinates")
+    @MethodSource("eu.oberon.oss.chess.base.impl.field.util.MethodSources#getFieldByCoordinates")
     void getFieldByCoordinates(int rank, String file, ChessField target) {
         assertEquals(target, ChessField.getFieldByCoordinates(file, rank));
     }

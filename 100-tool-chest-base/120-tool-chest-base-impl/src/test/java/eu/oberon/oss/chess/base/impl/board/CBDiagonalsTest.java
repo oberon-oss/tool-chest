@@ -1,18 +1,18 @@
 package eu.oberon.oss.chess.base.impl.board;
 
+import eu.oberon.oss.chess.base.defs.enums.CBDiagonals;
+import eu.oberon.oss.chess.base.defs.enums.FieldLocation;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.FieldIterator;
+import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
-import eu.oberon.oss.chess.base.enums.CBDiagonals;
-import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.FieldIterator;
-import eu.oberon.oss.chess.base.enums.FieldLocation;
 
 import java.util.List;
 
+import static eu.oberon.oss.chess.base.defs.enums.CBDiagonals.*;
+import static eu.oberon.oss.chess.base.defs.enums.MoveDirection.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static eu.oberon.oss.chess.base.enums.CBDiagonals.*;
-import static eu.oberon.oss.chess.base.enums.MoveDirection.*;
 
 /**
  * @author TigerLilly64
@@ -63,7 +63,7 @@ class CBDiagonalsTest {
                 assertEquals(8, lookup(field).get(0).getFields().size());
             } else {
                 assertEquals(2, CBDiagonals.lookup(field).size());
-                assertTrue(CBDiagonals.lookup(field).size() > 1 && CBDiagonals.lookup(field).size() <= 7 );
+                assertTrue(CBDiagonals.lookup(field).size() > 1 && CBDiagonals.lookup(field).size() <= 7);
             }
         }
     }

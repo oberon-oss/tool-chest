@@ -1,12 +1,12 @@
 package eu.oberon.oss.chess.base.impl;
 
-import eu.oberon.oss.chess.base.enums.CBDiagonals;
-import eu.oberon.oss.chess.base.enums.CBFiles;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Lines;
-import eu.oberon.oss.chess.base.interfaces.LinesInformation;
+import eu.oberon.oss.chess.base.defs.enums.CBDiagonals;
+import eu.oberon.oss.chess.base.defs.enums.CBFiles;
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Lines;
+import eu.oberon.oss.chess.base.defs.interfaces.LinesInformation;
 
 import java.util.ArrayList;
 import java.util.HashMap;

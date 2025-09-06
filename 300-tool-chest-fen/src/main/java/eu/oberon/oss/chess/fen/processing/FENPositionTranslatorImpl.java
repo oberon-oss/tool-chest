@@ -1,10 +1,10 @@
 package eu.oberon.oss.chess.fen.processing;
 
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.*;
-import eu.oberon.oss.chess.base.interfaces.validators.ExtendedChessValidator;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
+import eu.oberon.oss.chess.base.defs.interfaces.validators.ExtendedChessValidator;
 import eu.oberon.oss.chess.base.impl.BoardImpl.BoardBuilder;
 import eu.oberon.oss.chess.base.impl.CastlingConfigValidator;
 import eu.oberon.oss.chess.base.impl.CastlingConfigurationImpl;
@@ -18,12 +18,12 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static eu.oberon.oss.chess.base.enums.CastlingType.KING_SIDE;
-import static eu.oberon.oss.chess.base.enums.CastlingType.QUEEN_SIDE;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.ChessField.H1;
-import static eu.oberon.oss.chess.base.enums.PieceType.PAWN;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.KING_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.QUEEN_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.H1;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.PAWN;
 
 
 /**

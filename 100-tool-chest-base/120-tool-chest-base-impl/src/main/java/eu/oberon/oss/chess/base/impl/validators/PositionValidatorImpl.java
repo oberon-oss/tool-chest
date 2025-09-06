@@ -1,9 +1,9 @@
 package eu.oberon.oss.chess.base.impl.validators;
 
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.validators.ChessValidator;
 import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.interfaces.*;
-import eu.oberon.oss.chess.base.interfaces.validators.ChessValidator;
 
 /**
  * @param <F> Represents the class type providing field information

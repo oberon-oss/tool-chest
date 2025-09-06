@@ -1,7 +1,7 @@
 package eu.oberon.oss.chess.game.data;
 
 
-import eu.oberon.oss.chess.base.interfaces.*;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 
 import java.util.List;
 

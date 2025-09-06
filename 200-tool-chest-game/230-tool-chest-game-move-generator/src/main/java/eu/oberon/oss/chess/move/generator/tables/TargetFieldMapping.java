@@ -1,7 +1,7 @@
 package eu.oberon.oss.chess.move.generator.tables;
 
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
 import lombok.Getter;
-import eu.oberon.oss.chess.base.interfaces.Field;
 
 /**
  * @author TigerLilly64

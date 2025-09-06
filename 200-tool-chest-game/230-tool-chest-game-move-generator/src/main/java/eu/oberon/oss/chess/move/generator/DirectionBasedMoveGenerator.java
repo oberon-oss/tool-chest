@@ -1,14 +1,14 @@
 package eu.oberon.oss.chess.move.generator;
 
-import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Move;
+import eu.oberon.oss.chess.base.defs.enums.MoveDirection;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Move;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
 import eu.oberon.oss.chess.base.impl.MoveImpl;
-import eu.oberon.oss.chess.base.enums.MoveDirection;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
 import eu.oberon.oss.chess.move.generator.tables.Direction;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;

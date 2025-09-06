@@ -1,12 +1,12 @@
 package eu.oberon.oss.chess.fen.processing;
 
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.enums.PieceType;
 
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.PieceType.*;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
 
 
 /**

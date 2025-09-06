@@ -1,14 +1,14 @@
 package eu.oberon.oss.chess.base.impl;
 
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
 
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
-import static eu.oberon.oss.chess.base.enums.PieceType.*;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
 
 /**
  * @author TigerLilly64

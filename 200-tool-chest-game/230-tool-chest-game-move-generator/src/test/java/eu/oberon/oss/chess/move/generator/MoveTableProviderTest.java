@@ -1,18 +1,18 @@
 package eu.oberon.oss.chess.move.generator;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
 import eu.oberon.oss.chess.move.generator.tables.pieces.MoveTableProvider;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.PieceType.*;
 
 /**
  * @author TigerLilly64
@@ -40,8 +40,8 @@ class MoveTableProviderTest {
     void moveTableProviderTest_regular_pieces() {
         for (PieceType pieceType : new PieceType[]{KING, QUEEN, ROOK, BISHOP, KNIGHT}) {
             MoveTable<Field> moveTable =
-                Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPieceMoveTable(pieceType)
-                );
+                    Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPieceMoveTable(pieceType)
+                    );
             assertNotNull(moveTable);
             assertEquals(moveTable.getPiece(), pieceType);
             assertNull(moveTable.getColor());
@@ -54,8 +54,8 @@ class MoveTableProviderTest {
     @Test
     void moveTableProviderTest_white_pawns() {
         MoveTable<Field> moveTable =
-            Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(WHITE)
-            );
+                Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(WHITE)
+                );
         assertNotNull(moveTable);
         assertEquals(PAWN, moveTable.getPiece());
         assertEquals(WHITE, moveTable.getColor());
@@ -69,8 +69,8 @@ class MoveTableProviderTest {
     @Test
     void moveTableProviderTest_white_pawns_invalid_ranks() {
         MoveTable<Field> moveTable =
-            Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(WHITE)
-            );
+                Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(WHITE)
+                );
         assertNotNull(moveTable);
         assertEquals(PAWN, moveTable.getPiece());
         assertEquals(WHITE, moveTable.getColor());
@@ -85,8 +85,8 @@ class MoveTableProviderTest {
     @Test
     void moveTableProviderTest_black_pawns() {
         MoveTable<Field> moveTable =
-            Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(BLACK)
-            );
+                Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(BLACK)
+                );
         assertNotNull(moveTable);
         assertEquals(PAWN, moveTable.getPiece());
         assertEquals(BLACK, moveTable.getColor());
@@ -100,8 +100,8 @@ class MoveTableProviderTest {
     @Test
     void moveTableProviderTest_black_pawns_invalid_ranks() {
         MoveTable<Field> moveTable =
-            Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(BLACK)
-            );
+                Assertions.assertDoesNotThrow(() -> MoveTableProvider.getInstance().getPawnMoveTable(BLACK)
+                );
         assertNotNull(moveTable);
         assertEquals(PAWN, moveTable.getPiece());
         assertEquals(BLACK, moveTable.getColor());

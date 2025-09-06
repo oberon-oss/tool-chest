@@ -1,33 +1,34 @@
 package eu.oberon.oss.chess.base.impl.board;
 
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.exceptions.BoardValidationException;
+import eu.oberon.oss.chess.base.defs.interfaces.Board;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.ValidatorResult;
+import eu.oberon.oss.chess.base.defs.interfaces.validators.ChessValidator;
+import eu.oberon.oss.chess.base.impl.BoardImpl.BoardBuilder;
+import eu.oberon.oss.chess.base.impl.PieceImpl;
 import eu.oberon.oss.chess.base.impl.Util;
+import eu.oberon.oss.chess.base.impl.validators.BoardValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.exceptions.BoardValidationException;
-import eu.oberon.oss.chess.base.impl.BoardImpl.BoardBuilder;
-import eu.oberon.oss.chess.base.impl.PieceImpl;
-import eu.oberon.oss.chess.base.impl.validators.BoardValidator;
-import eu.oberon.oss.chess.base.interfaces.Board;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.ValidatorResult;
-import eu.oberon.oss.chess.base.interfaces.validators.ChessValidator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
-import static eu.oberon.oss.chess.base.enums.PieceType.*;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * @author TigerLilly64
@@ -42,7 +43,7 @@ class BoardValidatorTest extends Util {
 
     private Board<Field, Piece<Field>> generateToManyPieces(ChessColor color, PieceType piece) {
         BoardBuilder<Field, Piece<Field>> builder = new BoardBuilder<>();
-        Field[]                           fields;
+        Field[] fields;
 
         if (color == WHITE) {
             builder = getInitialPiecesForBlack(builder);
@@ -79,26 +80,26 @@ class BoardValidatorTest extends Util {
     @MethodSource
     void validate_invalid_PawnsOnRank8OrOne(Field field, ChessColor color) {
         BoardBuilder<Field, Piece<Field>> builder = new BoardBuilder<>()
-            .addPiece(new PieceImpl<>(KING, WHITE, A5))
-            .addPiece(new PieceImpl<>(KING, BLACK, H5))
-            .addPiece(new PieceImpl<>(PAWN, color, field));
+                .addPiece(new PieceImpl<>(KING, WHITE, A5))
+                .addPiece(new PieceImpl<>(KING, BLACK, H5))
+                .addPiece(new PieceImpl<>(PAWN, color, field));
         Board<Field, Piece<Field>> board = assertDoesNotThrow(builder::build);
         assertThrows(BoardValidationException.class, () -> boardValidator.validate(board));
     }
 
     public static Stream<Arguments> validate_invalid_ToManyWhitePiecesOfType() {
         return Stream.of(
-            Arguments.of(WHITE, QUEEN, "queens", 10, 9),
-            Arguments.of(WHITE, ROOK, "rooks", 10, 9),
-            Arguments.of(WHITE, BISHOP, "bishops", 10, 9),
-            Arguments.of(WHITE, KNIGHT, "knights", 10, 9),
-            Arguments.of(WHITE, PAWN, "pawns", 9, 8),
+                Arguments.of(WHITE, QUEEN, "queens", 10, 9),
+                Arguments.of(WHITE, ROOK, "rooks", 10, 9),
+                Arguments.of(WHITE, BISHOP, "bishops", 10, 9),
+                Arguments.of(WHITE, KNIGHT, "knights", 10, 9),
+                Arguments.of(WHITE, PAWN, "pawns", 9, 8),
 
-            Arguments.of(BLACK, QUEEN, "queens", 10, 9),
-            Arguments.of(BLACK, ROOK, "rooks", 10, 9),
-            Arguments.of(BLACK, BISHOP, "bishops", 10, 9),
-            Arguments.of(BLACK, KNIGHT, "knights", 10, 9),
-            Arguments.of(BLACK, PAWN, "pawns", 9, 8)
+                Arguments.of(BLACK, QUEEN, "queens", 10, 9),
+                Arguments.of(BLACK, ROOK, "rooks", 10, 9),
+                Arguments.of(BLACK, BISHOP, "bishops", 10, 9),
+                Arguments.of(BLACK, KNIGHT, "knights", 10, 9),
+                Arguments.of(BLACK, PAWN, "pawns", 9, 8)
         );
     }
 
@@ -108,7 +109,7 @@ class BoardValidatorTest extends Util {
     @MethodSource
     void validate_invalid_ToManyWhitePiecesOfType(ChessColor color, PieceType piece, String name, int found, int max) {
         BoardValidationException exception =
-            assertThrows(BoardValidationException.class, () -> boardValidator.validate(generateToManyPieces(color, piece)));
+                assertThrows(BoardValidationException.class, () -> boardValidator.validate(generateToManyPieces(color, piece)));
         String msg = String.format("Number of %s %s (%d) exceeds maximum of %d", color.name().toLowerCase(), name, found, max);
         assertEquals(msg, exception.getMessage());
     }
@@ -118,9 +119,9 @@ class BoardValidatorTest extends Util {
     void validate_invalid_ToManyWhitePieces() {
         BoardBuilder<Field, Piece<Field>> builder = new BoardBuilder<>();
         Board<Field, Piece<Field>> board = getInitialPiecesForWhite(builder)
-            .addPiece(new PieceImpl<>(KING, BLACK, E8))
-            .addPiece(new PieceImpl<>(ROOK, WHITE, F5))
-            .build();
+                .addPiece(new PieceImpl<>(KING, BLACK, E8))
+                .addPiece(new PieceImpl<>(ROOK, WHITE, F5))
+                .build();
         ValidatorResult result = boardValidator.validate(board);
         assertFalse(result.isValid());
         assertEquals("There can only be 16 white pieces on the board, 17 where found", result.getMessages().get(0));
@@ -131,9 +132,9 @@ class BoardValidatorTest extends Util {
     void validate_invalid_ToManyBlackPieces() {
         BoardBuilder<Field, Piece<Field>> builder = new BoardBuilder<>();
         Board<Field, Piece<Field>> board = getInitialPiecesForBlack(builder)
-            .addPiece(new PieceImpl<>(KING, WHITE, E1))
-            .addPiece(new PieceImpl<>(ROOK, BLACK, F5))
-            .build();
+                .addPiece(new PieceImpl<>(KING, WHITE, E1))
+                .addPiece(new PieceImpl<>(ROOK, BLACK, F5))
+                .build();
         ValidatorResult result = boardValidator.validate(board);
         assertFalse(result.isValid());
         assertEquals("There can only be 16 black pieces on the board, 17 where found", result.getMessages().get(0));
@@ -143,9 +144,9 @@ class BoardValidatorTest extends Util {
     @Test
     void validate_withOneWhiteAndOneBlackNotAdjacent() {
         assertDoesNotThrow(() -> boardValidator.validate(new BoardBuilder<>()
-                                                             .addPiece(new PieceImpl<>(KING, WHITE, E1))
-                                                             .addPiece(new PieceImpl<>(KING, BLACK, E8))
-                                                             .build()));
+                .addPiece(new PieceImpl<>(KING, WHITE, E1))
+                .addPiece(new PieceImpl<>(KING, BLACK, E8))
+                .build()));
     }
 
     @Test
@@ -167,11 +168,11 @@ class BoardValidatorTest extends Util {
     @SuppressWarnings("java:S5778")
     void validate_WithToWhiteKings() {
         ValidatorResult result = boardValidator.validate(
-            new BoardBuilder<>()
-                .addPiece(new PieceImpl<>(KING, WHITE, E1))
-                .addPiece(new PieceImpl<>(KING, WHITE, G1))
-                .addPiece(new PieceImpl<>(KING, BLACK, E8))
-                .build()
+                new BoardBuilder<>()
+                        .addPiece(new PieceImpl<>(KING, WHITE, E1))
+                        .addPiece(new PieceImpl<>(KING, WHITE, G1))
+                        .addPiece(new PieceImpl<>(KING, BLACK, E8))
+                        .build()
         );
         assertFalse(result.isValid());
         assertEquals("Expected 1 white king, but found 2", result.getMessages().get(0));
@@ -181,11 +182,11 @@ class BoardValidatorTest extends Util {
     @SuppressWarnings("java:S5778")
     void validate_WithToBlackKings() {
         ValidatorResult result = boardValidator.validate(
-            new BoardBuilder<>()
-                .addPiece(new PieceImpl<>(KING, WHITE, E1))
-                .addPiece(new PieceImpl<>(KING, BLACK, E8))
-                .addPiece(new PieceImpl<>(KING, BLACK, G8))
-                .build()
+                new BoardBuilder<>()
+                        .addPiece(new PieceImpl<>(KING, WHITE, E1))
+                        .addPiece(new PieceImpl<>(KING, BLACK, E8))
+                        .addPiece(new PieceImpl<>(KING, BLACK, G8))
+                        .build()
         );
         assertFalse(result.isValid());
         assertEquals("Expected 1 black king, but found 2", result.getMessages().get(0));
@@ -197,10 +198,10 @@ class BoardValidatorTest extends Util {
         BoardBuilder<Field, Piece<Field>> builder = new BoardBuilder<>();
         getInitialPiecesForWhite(getInitialPiecesForBlack(builder));
         ValidatorResult result = boardValidator.validate(
-            new BoardBuilder<>()
-                .copyFromBoard(builder.build())
-                .addPiece(new PieceImpl<>(QUEEN, WHITE, E4))
-                .build()
+                new BoardBuilder<>()
+                        .copyFromBoard(builder.build())
+                        .addPiece(new PieceImpl<>(QUEEN, WHITE, E4))
+                        .build()
         );
         assertFalse(result.isValid());
         assertEquals("Board must contain no more than 32 pieces, pieces in position:33", result.getMessages().get(0));

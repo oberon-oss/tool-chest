@@ -1,13 +1,13 @@
 package eu.oberon.oss.chess.base.impl.board;
 
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.FieldIterator;
+import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.FieldIterator;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * @author TigerLilly64

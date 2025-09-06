@@ -1,29 +1,28 @@
 package eu.oberon.oss.chess.move.generator;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Move;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Move;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
 import eu.oberon.oss.chess.base.impl.BoardImpl;
 import eu.oberon.oss.chess.base.impl.MoveImpl;
 import eu.oberon.oss.chess.base.impl.PieceImpl;
 import eu.oberon.oss.chess.base.impl.PositionImpl;
 import eu.oberon.oss.chess.game.data.Chess960StartingPositions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
+import static eu.oberon.oss.chess.base.defs.interfaces.Move.BIT_FLAG_REGULAR_MOVE;
 import static org.junit.jupiter.api.Assertions.*;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
-import static eu.oberon.oss.chess.base.enums.PieceType.*;
-import static eu.oberon.oss.chess.base.interfaces.Move.BIT_FLAG_REGULAR_MOVE;
-
 /**
  * @author TigerLilly64
  */

@@ -5,7 +5,8 @@ import org.junit.jupiter.params.provider.Arguments;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
+
 
 /**
  * @author TigerLilly64

@@ -1,22 +1,21 @@
 package eu.oberon.oss.chess.move.generator;
 
-import lombok.extern.log4j.Log4j2;
-import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.enums.CastlingType;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.*;
-import eu.oberon.oss.chess.game.data.ChessGame;
+import eu.oberon.oss.chess.base.defs.enums.CastlingType;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import eu.oberon.oss.chess.base.impl.MoveImpl;
+import eu.oberon.oss.chess.game.data.ChessGame;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
 import eu.oberon.oss.chess.move.generator.tables.pieces.MoveTableProvider;
+import lombok.extern.log4j.Log4j2;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static eu.oberon.oss.chess.base.enums.MoveDirection.*;
-
+import static eu.oberon.oss.chess.base.defs.enums.MoveDirection.*;
 /**
  * @author TigerLilly64
  */

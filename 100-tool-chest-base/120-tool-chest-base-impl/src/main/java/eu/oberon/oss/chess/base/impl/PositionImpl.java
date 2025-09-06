@@ -1,18 +1,18 @@
 package eu.oberon.oss.chess.base.impl;
 
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.Board;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
+import eu.oberon.oss.chess.base.defs.interfaces.validators.ChessValidator;
+import eu.oberon.oss.chess.base.impl.validators.BoardValidator;
+import eu.oberon.oss.chess.base.impl.validators.PositionValidatorImpl;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.impl.validators.BoardValidator;
-import eu.oberon.oss.chess.base.impl.validators.PositionValidatorImpl;
-import eu.oberon.oss.chess.base.interfaces.Board;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
-import eu.oberon.oss.chess.base.interfaces.validators.ChessValidator;
 
 import java.util.Objects;
 

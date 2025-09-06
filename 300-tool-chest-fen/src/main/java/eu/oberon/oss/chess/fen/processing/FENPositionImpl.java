@@ -1,18 +1,18 @@
 package eu.oberon.oss.chess.fen.processing;
 
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.interfaces.*;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import eu.oberon.oss.chess.base.impl.PositionImpl.PositionBuilder;
 import lombok.experimental.Accessors;
 
 import java.util.Objects;
 import java.util.Set;
 
-import static eu.oberon.oss.chess.base.enums.CastlingType.KING_SIDE;
-import static eu.oberon.oss.chess.base.enums.CastlingType.QUEEN_SIDE;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
-import static eu.oberon.oss.chess.base.interfaces.CastlingConfiguration.isCastlingConfigurationPresent;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.KING_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.QUEEN_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.interfaces.CastlingConfiguration.isCastlingConfigurationPresent;
 
 
 /**

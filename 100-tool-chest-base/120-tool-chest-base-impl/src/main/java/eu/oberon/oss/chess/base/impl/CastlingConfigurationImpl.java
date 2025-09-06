@@ -1,18 +1,17 @@
 package eu.oberon.oss.chess.base.impl;
 
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.CastlingType;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.exceptions.InvalidCastlingConfigurationException;
-import eu.oberon.oss.chess.base.interfaces.*;
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.CastlingType;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.exceptions.InvalidCastlingConfigurationException;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-import static eu.oberon.oss.chess.base.enums.CastlingType.KING_SIDE;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.KING_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
 
 /**
  * @author TigerLilly64

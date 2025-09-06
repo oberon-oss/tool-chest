@@ -1,6 +1,6 @@
 package eu.oberon.oss.chess.game.data;
 
-import eu.oberon.oss.chess.base.enums.GameResult;
+import eu.oberon.oss.chess.base.defs.enums.GameResult;
 
 import java.time.ZonedDateTime;
 

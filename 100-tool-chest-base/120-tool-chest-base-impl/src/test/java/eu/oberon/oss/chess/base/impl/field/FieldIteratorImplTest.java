@@ -1,21 +1,21 @@
 package eu.oberon.oss.chess.base.impl.field;
 
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.FieldIterator;
+import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.impl.FieldIteratorImpl;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.FieldIterator;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Stream;
 
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
 
 /**
  * @author TigerLilly64
@@ -23,7 +23,7 @@ import static eu.oberon.oss.chess.base.enums.ChessField.*;
 class FieldIteratorImplTest {
 
     @ParameterizedTest
-    @MethodSource("eu.oberon.oss.chess.game.base.field.util.MethodSources#getRankFields")
+    @MethodSource("eu.oberon.oss.chess.base.impl.field.util.MethodSources#getRankFields")
     void rankIteratorTest(int rank, List<ChessField> target) {
         FieldIterator<Field> iterator = FieldIteratorImpl.fieldIterator(rank);
         for (ChessField field : target) {
@@ -33,7 +33,7 @@ class FieldIteratorImplTest {
     }
 
     @ParameterizedTest
-    @MethodSource("eu.oberon.oss.chess.game.base.field.util.MethodSources#getFileFields")
+    @MethodSource("eu.oberon.oss.chess.base.impl.field.util.MethodSources#getFileFields")
     void fileIteratorTest(String file, List<ChessField> target) {
         FieldIterator<Field> iterator = FieldIteratorImpl.fieldIterator(file);
         ChessField[]         array    = target.toArray(new ChessField[0]);

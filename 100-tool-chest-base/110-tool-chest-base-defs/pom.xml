@@ -7,7 +7,6 @@
         <groupId>eu.oberon.oss.chess</groupId>
         <artifactId>tool-chest-base</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        
     </parent>
 
     <artifactId>tool-chest-base-defs</artifactId>

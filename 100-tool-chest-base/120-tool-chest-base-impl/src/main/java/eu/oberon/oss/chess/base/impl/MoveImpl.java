@@ -1,14 +1,14 @@
 package eu.oberon.oss.chess.base.impl;
 
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Move;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 import lombok.Builder;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Move;
-import eu.oberon.oss.chess.base.interfaces.Piece;
 
 /**
  * @author TigerLilly64

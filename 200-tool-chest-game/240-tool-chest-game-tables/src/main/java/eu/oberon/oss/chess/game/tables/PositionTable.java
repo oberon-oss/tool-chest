@@ -1,7 +1,7 @@
 package eu.oberon.oss.chess.game.tables;
 
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 
 import java.util.List;
 

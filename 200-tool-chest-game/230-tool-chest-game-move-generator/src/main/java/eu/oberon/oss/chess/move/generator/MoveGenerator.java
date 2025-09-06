@@ -1,9 +1,9 @@
 package eu.oberon.oss.chess.move.generator;
 
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Move;
-import eu.oberon.oss.chess.base.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Move;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 import eu.oberon.oss.chess.game.data.ChessGame;
 import org.jetbrains.annotations.NotNull;
 

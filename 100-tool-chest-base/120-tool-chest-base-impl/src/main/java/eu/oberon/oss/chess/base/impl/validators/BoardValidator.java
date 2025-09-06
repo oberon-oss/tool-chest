@@ -1,13 +1,13 @@
 package eu.oberon.oss.chess.base.impl.validators;
 
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.exceptions.BoardValidationException;
-import eu.oberon.oss.chess.base.interfaces.Board;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.ValidatorResult;
-import eu.oberon.oss.chess.base.interfaces.validators.ChessValidator;
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.exceptions.BoardValidationException;
+import eu.oberon.oss.chess.base.defs.interfaces.Board;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.ValidatorResult;
+import eu.oberon.oss.chess.base.defs.interfaces.validators.ChessValidator;
 import eu.oberon.oss.chess.base.impl.ValidatorResultImpl;
 import org.jetbrains.annotations.NotNull;
 
@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
 
 /**
  * @param <F> Represents the class type providing field information

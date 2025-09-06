@@ -1,9 +1,9 @@
 package eu.oberon.oss.chess.game.data;
 
-import eu.oberon.oss.chess.base.enums.CastlingType;
-import eu.oberon.oss.chess.base.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.CastlingType;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import eu.oberon.oss.chess.base.impl.CastlingConfigurationImpl;
-import eu.oberon.oss.chess.base.interfaces.*;
 import eu.oberon.oss.chess.fen.processing.FENPositionTranslator;
 import eu.oberon.oss.chess.fen.processing.FENPositionTranslatorImpl;
 import lombok.Getter;
@@ -13,10 +13,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static eu.oberon.oss.chess.base.enums.CastlingType.KING_SIDE;
-import static eu.oberon.oss.chess.base.enums.CastlingType.QUEEN_SIDE;
-import static eu.oberon.oss.chess.base.enums.ChessColor.BLACK;
-import static eu.oberon.oss.chess.base.enums.ChessColor.WHITE;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.KING_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.CastlingType.QUEEN_SIDE;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
+import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
 
 /**
  * Enumerates the possible staring positions for a chess game.

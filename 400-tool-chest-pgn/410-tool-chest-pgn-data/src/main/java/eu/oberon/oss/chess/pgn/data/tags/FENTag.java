@@ -1,12 +1,12 @@
 package eu.oberon.oss.chess.pgn.data.tags;
 
-import org.jetbrains.annotations.NotNull;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
 import eu.oberon.oss.chess.fen.processing.FENPosition;
 import eu.oberon.oss.chess.fen.processing.FENPositionTranslatorImpl;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
 import eu.oberon.oss.chess.pgn.data.tags.defs.AbstractTag;
 import eu.oberon.oss.chess.pgn.data.tags.defs.TagValueFromString;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Defines the FEN tag that may appear in the {@link TagSection} of a PGN notated game.

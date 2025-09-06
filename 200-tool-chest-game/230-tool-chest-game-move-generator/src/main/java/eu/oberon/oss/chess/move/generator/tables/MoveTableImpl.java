@@ -1,12 +1,11 @@
 package eu.oberon.oss.chess.move.generator.tables;
 
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.move.generator.MoveTable;
 import lombok.Getter;
 import org.jetbrains.annotations.Nullable;
-import eu.oberon.oss.chess.base.enums.ChessColor;
-
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.move.generator.MoveTable;
 
 import java.util.HashMap;
 import java.util.Map;

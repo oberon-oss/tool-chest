@@ -1,8 +1,8 @@
 package eu.oberon.oss.chess.game.tables;
 
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
 
 public interface ExtendedPosition<F extends Field, P extends Piece<F>> {
     Position<F, P> position();

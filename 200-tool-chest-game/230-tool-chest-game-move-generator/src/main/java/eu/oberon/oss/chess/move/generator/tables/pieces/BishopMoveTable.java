@@ -1,19 +1,19 @@
 package eu.oberon.oss.chess.move.generator.tables.pieces;
 
-import eu.oberon.oss.chess.base.enums.ChessColor;
-import eu.oberon.oss.chess.base.enums.PieceType;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import org.jetbrains.annotations.Nullable;
+import eu.oberon.oss.chess.base.defs.enums.ChessColor;
+import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
 import eu.oberon.oss.chess.move.generator.MoveTable;
 import eu.oberon.oss.chess.move.generator.tables.Direction;
 import eu.oberon.oss.chess.move.generator.tables.DirectionMap.DirectionMapBuilder;
 import eu.oberon.oss.chess.move.generator.tables.MoveTableImpl;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping.TargetFieldMapBuilder;
+import org.jetbrains.annotations.Nullable;
 
-import static eu.oberon.oss.chess.base.enums.ChessField.*;
-import static eu.oberon.oss.chess.base.enums.MoveDirection.*;
-import static eu.oberon.oss.chess.base.enums.PieceType.BISHOP;
+import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
+import static eu.oberon.oss.chess.base.defs.enums.MoveDirection.*;
+import static eu.oberon.oss.chess.base.defs.enums.PieceType.BISHOP;
 
 /**
  * @author TigerLilly64

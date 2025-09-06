@@ -1,18 +1,18 @@
 package eu.oberon.oss.chess.fen.processing;
 
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.Position;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.Piece;
-import eu.oberon.oss.chess.base.interfaces.Position;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static eu.oberon.oss.chess.fen.processing.FENPositionTranslator.INITIAL_POSITION_FEN_SETUP_STRING;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author TigerLilly64

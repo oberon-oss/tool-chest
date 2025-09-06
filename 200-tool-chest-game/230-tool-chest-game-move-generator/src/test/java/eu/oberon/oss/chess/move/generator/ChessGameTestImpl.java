@@ -1,10 +1,10 @@
 package eu.oberon.oss.chess.move.generator;
 
-import eu.oberon.oss.chess.base.enums.GameResult;
+import eu.oberon.oss.chess.base.defs.enums.GameResult;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
+import eu.oberon.oss.chess.game.data.*;
 import lombok.Getter;
 import lombok.Setter;
-import eu.oberon.oss.chess.base.interfaces.*;
-import eu.oberon.oss.chess.game.data.*;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

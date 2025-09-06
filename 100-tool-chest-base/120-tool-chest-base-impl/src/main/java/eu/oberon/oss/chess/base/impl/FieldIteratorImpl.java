@@ -1,14 +1,14 @@
 package eu.oberon.oss.chess.base.impl;
 
+import eu.oberon.oss.chess.base.defs.enums.CBAllFields;
+import eu.oberon.oss.chess.base.defs.enums.CBFiles;
+import eu.oberon.oss.chess.base.defs.enums.CBRanks;
+import eu.oberon.oss.chess.base.defs.enums.ChessField;
+import eu.oberon.oss.chess.base.defs.interfaces.Field;
+import eu.oberon.oss.chess.base.defs.interfaces.FieldIterator;
+import eu.oberon.oss.chess.base.defs.interfaces.Lines;
 import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.NotNull;
-import eu.oberon.oss.chess.base.enums.CBAllFields;
-import eu.oberon.oss.chess.base.enums.CBFiles;
-import eu.oberon.oss.chess.base.enums.CBRanks;
-import eu.oberon.oss.chess.base.enums.ChessField;
-import eu.oberon.oss.chess.base.interfaces.Field;
-import eu.oberon.oss.chess.base.interfaces.FieldIterator;
-import eu.oberon.oss.chess.base.interfaces.Lines;
 
 import java.util.Arrays;
 import java.util.List;

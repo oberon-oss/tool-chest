@@ -1,7 +1,7 @@
 package eu.oberon.oss.chess.fen.processing;
 
-import eu.oberon.oss.chess.base.exceptions.ValidationResultException;
-import eu.oberon.oss.chess.base.interfaces.ValidatorResult;
+import eu.oberon.oss.chess.base.defs.exceptions.ValidationResultException;
+import eu.oberon.oss.chess.base.defs.interfaces.ValidatorResult;
 
 /**
  * Exception intended for implementations of the {@link FENPositionTranslator} interface.
