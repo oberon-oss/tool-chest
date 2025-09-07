@@ -11,14 +11,6 @@
     </parent>
 
     <artifactId>tool-chest-game-data</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>eu.oberon.oss.chess</groupId>
-            <artifactId>tool-chest-fen</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    
 
 </project>
