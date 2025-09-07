@@ -3,6 +3,7 @@ package eu.oberon.oss.chess.move.generator;
 import eu.oberon.oss.chess.base.defs.enums.CastlingType;
 import eu.oberon.oss.chess.base.defs.enums.ChessColor;
 import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import eu.oberon.oss.chess.base.impl.MoveImpl;
 import eu.oberon.oss.chess.game.data.ChessGame;
 import eu.oberon.oss.chess.move.generator.tables.TargetFieldMapping;
