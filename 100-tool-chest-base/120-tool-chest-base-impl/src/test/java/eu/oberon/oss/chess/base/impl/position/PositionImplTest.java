@@ -7,8 +7,7 @@ import eu.oberon.oss.chess.base.defs.interfaces.Position;
 import eu.oberon.oss.chess.base.impl.Util;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author TigerLilly64

@@ -3,6 +3,8 @@ package eu.oberon.oss.chess.base.impl.moves;
 import eu.oberon.oss.chess.base.defs.enums.MoveDirection;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * @author TigerLilly64
  */

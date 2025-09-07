@@ -27,8 +27,7 @@ import static eu.oberon.oss.chess.base.defs.enums.ChessColor.BLACK;
 import static eu.oberon.oss.chess.base.defs.enums.ChessColor.WHITE;
 import static eu.oberon.oss.chess.base.defs.enums.ChessField.*;
 import static eu.oberon.oss.chess.base.defs.enums.PieceType.*;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author TigerLilly64
