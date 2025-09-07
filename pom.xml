@@ -24,8 +24,8 @@
 
     <modules>
         <module>100-tool-chest-base</module>
-        <module>200-tool-chest-game</module>
-        <module>300-tool-chest-fen</module>
+        <module>300-tool-chest-game</module>
+        <module>200-tool-chest-fen</module>
         <module>400-tool-chest-pgn</module>
         <module>999-coverage</module>
     </modules>

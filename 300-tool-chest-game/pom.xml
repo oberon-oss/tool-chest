@@ -14,10 +14,11 @@
     <artifactId>tool-chest-game</artifactId>
 
     <modules>
-        <module>220-tool-chest-game-data</module>
-        <module>230-tool-chest-game-move-generator</module>
-        <module>240-tool-chest-game-tables</module>
+        <module>310-tool-chest-game-data</module>
+        <module>320-tool-chest-game-move-generator</module>
+        <module>330-tool-chest-game-tables</module>
     </modules>
+
     <dependencies>
         <dependency>
             <groupId>eu.oberon.oss.chess</groupId>
