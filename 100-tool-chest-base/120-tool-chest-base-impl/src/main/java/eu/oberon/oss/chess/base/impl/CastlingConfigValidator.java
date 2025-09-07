@@ -3,6 +3,7 @@ package eu.oberon.oss.chess.base.impl;
 import eu.oberon.oss.chess.base.defs.enums.ChessColor;
 import eu.oberon.oss.chess.base.defs.enums.ChessField;
 import eu.oberon.oss.chess.base.defs.enums.PieceType;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import eu.oberon.oss.chess.base.defs.interfaces.validators.ExtendedChessValidator;
 import org.jetbrains.annotations.NotNull;
 

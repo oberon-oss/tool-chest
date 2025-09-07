@@ -1,6 +1,6 @@
 package eu.oberon.oss.chess.base.impl.validators;
 
-import eu.oberon.oss.chess.base.defs.interfaces.Piece;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import eu.oberon.oss.chess.base.defs.interfaces.validators.ChessValidator;
 import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.NotNull;

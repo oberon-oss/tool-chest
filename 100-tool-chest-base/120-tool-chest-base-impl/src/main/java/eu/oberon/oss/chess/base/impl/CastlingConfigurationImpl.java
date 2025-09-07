@@ -5,6 +5,7 @@ import eu.oberon.oss.chess.base.defs.enums.CastlingType;
 import eu.oberon.oss.chess.base.defs.enums.ChessColor;
 import eu.oberon.oss.chess.base.defs.enums.PieceType;
 import eu.oberon.oss.chess.base.defs.exceptions.InvalidCastlingConfigurationException;
+import eu.oberon.oss.chess.base.defs.interfaces.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
