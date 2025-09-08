@@ -6,10 +6,6 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import eu.oberon.oss.chess.pgn.reader.FilePgnSectionProvider;
-import eu.oberon.oss.chess.pgn.reader.PgnDataReader;
-import eu.oberon.oss.chess.pgn.reader.PgnGameContainer;
-import eu.oberon.oss.chess.pgn.reader.PgnGameContainerProcessor;
 
 import java.io.File;
 import java.util.stream.Stream;
