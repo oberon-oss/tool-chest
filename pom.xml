@@ -20,6 +20,7 @@
         <argLine/>
         <antlr4.version>4.13.2</antlr4.version>
         <slfj-simple.version>1.7.30</slfj-simple.version>
+        <sonar.organization>oberon-oss-eu</sonar.organization>
     </properties>
 
     <modules>
