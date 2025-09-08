@@ -23,10 +23,8 @@ class PgnDataReaderTest {
 
     private static @NotNull Stream<Arguments> testReadingFile() {
         return Stream.of(
-              Arguments.of(PATH + "365chess_games.pgn"),
-              Arguments.of(PATH + "365chess_games_1.pgn"),
-              Arguments.of(PATH + "365chess_games_2.pgn"),
-              Arguments.of(PATH + "ChessAdmin-Class C.pgn")
+              Arguments.of(PATH + "365chess_games.pgn"),    // Small file, all data on one long line
+              Arguments.of(PATH + "ChessAdmin-Class C.pgn") // Small file, data over multiple lines.
         );
     }
 

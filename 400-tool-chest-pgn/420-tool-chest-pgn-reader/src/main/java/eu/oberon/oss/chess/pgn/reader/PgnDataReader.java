@@ -97,7 +97,7 @@ public class PgnDataReader extends PGNImportFormatBaseListener {
 
     @Override
     public void enterRecursiveVariation(RecursiveVariationContext ctx) {
-        LOGGER.debug("Entering recursive variation at depth {}", builderStack.size());
+        LOGGER.debug("Entering recursive variation at depth {}", builderStack.size()+1);
         builderStack.push(elementSequenceBuilder);
         elementSequenceBuilder = ElementSequence.builder();
     }

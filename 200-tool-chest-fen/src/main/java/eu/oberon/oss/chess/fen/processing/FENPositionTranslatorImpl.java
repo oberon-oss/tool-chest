@@ -173,7 +173,7 @@ public class FENPositionTranslatorImpl implements FENPositionTranslator<Field, P
                 int parseInt = Integer.parseInt(m.group(0));
                 if (currentField != H1) {
                     iterator.skipFields(parseInt);
-                    LOGGER.debug("Skipping {} fields", parseInt);
+                    LOGGER.trace("Skipping {} fields", parseInt);
                 }
             } else {
                 PieceType fenChessPiece = FENChessPieceTranslator.translate(content);
@@ -184,7 +184,7 @@ public class FENPositionTranslatorImpl implements FENPositionTranslator<Field, P
                     color = WHITE;
                 }
                 builder.addPiece(new PieceImpl<>(fenChessPiece, color, currentField));
-                LOGGER.debug("Processing piece {} @ {}", content, currentField);
+                LOGGER.trace("Processing piece {} @ {}", content, currentField);
             }
         }
     }
