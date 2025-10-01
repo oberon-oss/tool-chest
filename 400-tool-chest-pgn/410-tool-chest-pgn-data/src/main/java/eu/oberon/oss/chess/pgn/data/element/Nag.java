@@ -2,6 +2,7 @@ package eu.oberon.oss.chess.pgn.data.element;
 
 import lombok.Getter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Slf4j
 @Getter
 @ToString
 public class Nag implements Element<Integer> {
@@ -28,7 +30,7 @@ public class Nag implements Element<Integer> {
 
         int glyph = Integer.parseInt(matcher.group(1));
         if (!NAG_LOOKUP_TABLE.containsKey(glyph)) {
-            throw new IllegalArgumentException("Unknown glyph code: $" + glyph);
+            LOGGER.warn("Unknown GLYPH code: {}",glyph);
         }
 
         data = glyph;

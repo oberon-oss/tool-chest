@@ -12,7 +12,7 @@ parse
  ;
 
 pgnGame
- : tagSection moveComment? moveTextSection gameTermination
+ : tagSection moveTextSection gameTermination
  ;
 
 tagSection
@@ -42,9 +42,9 @@ elementSequence
 element
  : processingInstruction
  | restOfLineComment
+ | moveComment
  | moveNumberIndication
  | sanMove
- | moveComment
  | nag
  ;
 

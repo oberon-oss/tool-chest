@@ -20,8 +20,10 @@ class PgnDataReaderTest {
 
     private static @NotNull Stream<Arguments> testReadingFile() {
         return Stream.of(
-              Arguments.of(PATH + "365chess_games.pgn"),    // Small file, all data on one long line
-              Arguments.of(PATH + "ChessAdmin-Class C.pgn") // Small file, data over multiple lines.
+                Arguments.of(PATH + "365chess_games.pgn"),      // Small file, all data on one long line
+                Arguments.of(PATH + "ChessAdmin-Class C.pgn"),  // Small file, data over multiple lines.
+                Arguments.of(PATH + "365chess_games_1.pgn"),    // Large file #1
+                Arguments.of(PATH + "365chess_games_2.pgn")     // Large file #2
         );
     }
 
@@ -29,18 +31,20 @@ class PgnDataReaderTest {
     @MethodSource
     void testReadingFile(String filename) {
         assertDoesNotThrow(
-              () -> PgnDataReader.processPgnData(
-                    new FilePgnSectionProvider(new File(filename)),
-                    new PgnGameContainerProcessorImpl()
-              )
+                () -> PgnDataReader.processPgnData(
+                        new FilePgnSectionProvider(new File(filename)),
+                        new PgnGameContainerProcessorImpl()
+                )
         );
     }
 
     private static class PgnGameContainerProcessorImpl implements PgnGameContainerProcessor {
         @Override
         public void processGameContainer(PgnGameContainer container) {
-            LOGGER.info(container.getFormattedLogRecord());
-            assertFalse(container.hasErrors());
+            if (container.hasErrors()) {
+                LOGGER.info(container.getFormattedLogRecord());
+                throw new IllegalStateException(String.valueOf(container.getRecordErrors()));
+            }
         }
     }
 }
