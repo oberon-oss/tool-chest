@@ -11,6 +11,7 @@ import java.io.File;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @Log4j2
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -38,7 +39,8 @@ class PgnDataReaderTest {
     private static class PgnGameContainerProcessorImpl implements PgnGameContainerProcessor {
         @Override
         public void processGameContainer(PgnGameContainer container) {
-            // Dummy method.
+            LOGGER.info(container.getFormattedLogRecord());
+            assertFalse(container.hasErrors());
         }
     }
 }

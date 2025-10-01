@@ -27,15 +27,16 @@ public record MoveComment(String text) implements Element<String> {
      * @since 1.0.0
      */
     public MoveComment(@NotNull String text) {
-        Matcher matcher = STRIPPER.matcher(text);
+        String cleanedString = text.replace("\n","").replace("\r","");
+        Matcher matcher = STRIPPER.matcher(cleanedString);
         if (!matcher.matches()) {
-            throw new IllegalArgumentException("Move text invalid: '" + text + "'");
+            throw new IllegalArgumentException("Move text invalid: '" + cleanedString + "'");
         }
         this.text = matcher.group(1).trim();
     }
 
     @Override
-    public String toString() {
+    public @NotNull String toString() {
         return "MoveComment{" + "text='" + text + '\'' + '}';
     }
 
