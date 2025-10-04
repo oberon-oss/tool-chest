@@ -5,13 +5,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junitpioneer.jupiter.params.IntRangeSource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class NagTest {
-    private static final Logger log = LoggerFactory.getLogger(NagTest.class);
     private LogCaptor logCaptor;
 
     @BeforeEach
