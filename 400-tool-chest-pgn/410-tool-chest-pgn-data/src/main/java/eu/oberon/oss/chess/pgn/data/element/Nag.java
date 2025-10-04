@@ -17,35 +17,47 @@ import java.util.regex.Pattern;
 @Getter
 @ToString
 public class Nag implements Element<Integer> {
-    private final Integer data;
+    private final Integer elementData;
 
     private static final Pattern SPLITTER = Pattern.compile("^\\s*\\$(\\d+)");
 
+    /**
+     * Creates a new NAG token from the provided text.
+     *
+     * @param text the input text to process.
+     *
+     * @throws IllegalArgumentException In one of the following cases:
+     *                                  <ul>
+     *                                      <li>The provided text is not a valid formatter NAG ($n) where n is in the range 0-255 (inclusive). </li>
+     *                                      <li>The glyph value (the number) is outside the range 0-255 (inclusive) </li>
+     *                                  </ul>
+     * @since 1.0.0
+     */
     public Nag(String text) {
         Matcher matcher = SPLITTER.matcher(text);
 
         if (!matcher.matches()) {
-            throw new IllegalArgumentException("text is not allowed for pattern " + SPLITTER.pattern());
+            throw new IllegalArgumentException("text '" + text + "' is not allowed for pattern: " + SPLITTER.pattern());
         }
 
         int glyph = Integer.parseInt(matcher.group(1));
+
         if (!NAG_LOOKUP_TABLE.containsKey(glyph)) {
-            LOGGER.warn("Unknown GLYPH code: {}",glyph);
+            LOGGER.warn("Unknown GLYPH code: {}", glyph);
         }
 
-        data = glyph;
-    }
+        if (glyph > 255) {
+            throw new IllegalArgumentException("GLYPH code " + glyph + " is greater outside expected range 0..255");
+        }
 
-    @Override
-    public Integer getElementData() {
-        return data;
+        elementData = glyph;
     }
 
     private static final Map<Integer, String> NAG_LOOKUP_TABLE;
 
     static {
-        String               nagProperties = "nag-lookup.properties";
-        Map<Integer, String> wrk           = new HashMap<>();
+        String nagProperties = "nag-lookup.properties";
+        Map<Integer, String> wrk = new HashMap<>();
 
         try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(nagProperties)) {
             Properties properties = new Properties();
@@ -55,8 +67,7 @@ public class Nag implements Element<Integer> {
                 wrk.put(Integer.parseInt(key), properties.getProperty(key));
                 properties.getProperty(o.toString());
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new IllegalStateException("Failure loading resource " + nagProperties, e);
         }
 
